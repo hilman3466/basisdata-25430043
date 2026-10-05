@@ -1,0 +1,15 @@
+# File konfigurasi lokal
+config.php
+config.inc.php
+
+# File kredensial
+.env
+*.env
+
+# Backup/database sementara
+*.bak
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store
