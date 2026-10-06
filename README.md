@@ -17,8 +17,6 @@
 
 ### Lingkup Layanan
 
-### Lingkup Layanan
-
 Toko Sempurna Hemat merupakan toko yang menjual berbagai kebutuhan sehari-hari,
 seperti makanan ringan, minuman, susu, sampo, korek, obat-obatan, sembako, dan
 kebutuhan rumah tangga. Toko melayani pembeli yang datang langsung maupun
