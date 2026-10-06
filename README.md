@@ -11,10 +11,19 @@
 
 **Tema:** Toko Daring (E-Commerce)  
 **Kode Tema:** tokodaring  
-**Basis Data Proyek:** tokodaring_043  
-**Akun Proyek:** dev_043  
+**Basis Data Proyek:** tokodaring\_043  
+**Akun Proyek:** dev\_043  
 **Nama Organisasi:** RakitRuang HAR
 
 ### Lingkup Layanan
 
 RakitRuang HAR merupakan toko daring yang menyediakan berbagai perlengkapan hobi dan kegiatan DIY bagi pelajar, mahasiswa, dan masyarakat umum. Sistem ini digunakan untuk mengelola katalog produk, kategori produk, harga, serta ketersediaan stok. Pelanggan dapat membuat akun, melihat produk, memasukkan barang ke dalam keranjang, dan melakukan pemesanan melalui proses checkout. Sistem juga mencatat pembayaran dan informasi pengiriman sehingga setiap pesanan dapat dipantau dari proses pemesanan hingga barang dikirim kepada pelanggan.
+
+
+
+\## Catatan Pertemuan 1
+
+
+
+Lingkungan kerja praktikum menggunakan XAMPP dan MariaDB. Repository digunakan untuk menyimpan skrip, laporan, dan bukti praktikum.
+
