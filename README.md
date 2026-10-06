@@ -17,7 +17,7 @@
 
 ### Lingkup Layanan
 
-RakitRuang HAR merupakan toko daring yang menyediakan berbagai perlengkapan hobi dan kegiatan DIY bagi pelajar, mahasiswa, dan masyarakat umum. Sistem ini digunakan untuk mengelola katalog produk, kategori produk, harga, serta ketersediaan stok. Pelanggan dapat membuat akun, melihat produk, memasukkan barang ke dalam keranjang, dan melakukan pemesanan melalui proses checkout. Sistem juga mencatat pembayaran dan informasi pengiriman sehingga setiap pesanan dapat dipantau dari proses pemesanan hingga barang dikirim kepada pelanggan.
+Toko Sempurna Hemat merupakan toko daring yang menyediakan berbagai perlengkapan hobi dan kegiatan DIY bagi pelajar, mahasiswa, dan masyarakat umum. Sistem ini digunakan untuk mengelola katalog produk, kategori produk, harga, serta ketersediaan stok. Pelanggan dapat membuat akun, melihat produk, memasukkan barang ke dalam keranjang, dan melakukan pemesanan melalui proses checkout. Sistem juga mencatat pembayaran dan informasi pengiriman sehingga setiap pesanan dapat dipantau dari proses pemesanan hingga barang dikirim kepada pelanggan.
 
 
 
