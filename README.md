@@ -13,11 +13,22 @@
 **Kode Tema:** tokodaring  
 **Basis Data Proyek:** tokodaring\_043  
 **Akun Proyek:** dev\_043  
-**Nama Organisasi:** RakitRuang HAR
+**Nama Organisasi:** Toko Sempurna Hemat
 
 ### Lingkup Layanan
 
-RakitRuang HAR merupakan toko daring yang menyediakan berbagai perlengkapan hobi dan kegiatan DIY bagi pelajar, mahasiswa, dan masyarakat umum. Sistem ini digunakan untuk mengelola katalog produk, kategori produk, harga, serta ketersediaan stok. Pelanggan dapat membuat akun, melihat produk, memasukkan barang ke dalam keranjang, dan melakukan pemesanan melalui proses checkout. Sistem juga mencatat pembayaran dan informasi pengiriman sehingga setiap pesanan dapat dipantau dari proses pemesanan hingga barang dikirim kepada pelanggan.
+Toko Sempurna Hemat merupakan toko yang menjual berbagai kebutuhan sehari-hari,
+seperti makanan ringan, minuman, susu, sampo, korek, obat-obatan, sembako, dan
+kebutuhan rumah tangga. Toko melayani pembeli yang datang langsung maupun
+pelanggan yang melakukan pemesanan melalui WhatsApp atau aplikasi sebelum
+datang ke toko.
+
+Sistem yang dirancang digunakan untuk membantu pencatatan barang, harga, stok,
+pelanggan, pesanan, pembayaran, penerimaan barang dari pemasok, tagihan, serta
+informasi program hadiah. Untuk pesanan dari jarak jauh, barang disiapkan oleh
+pihak toko dan pelanggan datang sendiri ke toko untuk mengambil pesanannya.
+Sistem ini juga membantu mengurangi antrean dan membuat perubahan maupun
+riwayat pesanan lebih mudah dicatat.
 
 
 
