@@ -95,6 +95,9 @@ berperan dalam proses pemesanan dan pengiriman barang ke toko.
 | PB-21 | Mencatat informasi hadiah atau program promosi produk | Petugas Toko, Pengelola Toko | Pelanggan menanyakan atau ingin menukarkan hadiah dari program produk tertentu |
 | PB-22 | Memantau status dan riwayat pesanan pelanggan | Pelanggan, Admin Pesanan, Petugas Toko | Pelanggan atau pihak toko ingin mengetahui perkembangan atau riwayat pesanan |
 | PB-23 | Membuat laporan kegiatan toko | Pengelola Toko | Pemilik toko membutuhkan informasi mengenai penjualan, stok, pesanan, atau tagihan |
+| PB-24 | Mengelola data petugas | Pengelola Toko | Ada petugas baru, perubahan data petugas, atau data petugas perlu diperbarui |
+| PB-25 | Mengelola data pemasok | Pengelola Toko | Ada pemasok baru atau informasi pemasok perlu diperbarui |
+| PB-26 | Mencatat klaim hadiah pelanggan | Pelanggan, Petugas Toko | Pelanggan mengajukan atau menyelesaikan klaim hadiah |
 
 ## 3. Dokumen sumber yang dianalisis
 
