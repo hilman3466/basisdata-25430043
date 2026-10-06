@@ -13,7 +13,7 @@
 **Kode Tema:** tokodaring  
 **Basis Data Proyek:** tokodaring\_043  
 **Akun Proyek:** dev\_043  
-**Nama Organisasi:** RakitRuang HAR
+**Nama Organisasi:** Toko Sempurna Hemat
 
 ### Lingkup Layanan
 
