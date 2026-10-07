@@ -8,7 +8,7 @@ dari anggota maupun pembeli umum.
 
 Dalam kegiatan sehari-hari, mahasiswa yang ingin menjadi anggota melakukan
 pendaftaran dengan mengisi NIM, nama, program studi, dan nomor HP. Setelah
-terdaftar, anggota memperoleh nomor anggota. Anggota yang masih aktif
+terdaftar, anggota memperoleh nomor anggota. Anggota yang masih aktif 
 mendapatkan potongan 5% pada setiap nota.
 
 Penjualan dilakukan oleh kasir. Di sisi lain, petugas gudang memeriksa stok
