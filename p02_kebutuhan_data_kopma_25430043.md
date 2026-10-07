@@ -181,5 +181,5 @@ agar tidak terjadi data ganda.
 
 Selain itu, data yang berkaitan dengan transaksi lama harus tetap dapat
 ditelusuri meskipun terjadi perubahan harga barang atau perubahan status
-anggota.“...meskipun terjadi perubahan harga barang atau perubahan status anggota.”
+anggota.
 
