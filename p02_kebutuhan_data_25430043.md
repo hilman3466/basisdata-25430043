@@ -274,7 +274,7 @@ penerimaan dari pemasok, tagihan, dan program hadiah.
 | KI-03 | Pihak toko perlu mengetahui jumlah penjualan dan barang yang paling sering terjual dalam periode tertentu untuk membantu melihat barang yang banyak diminati. | Penjualan, Detail Penjualan, Barang |
 | KI-04 | Pihak toko perlu mengetahui barang yang stoknya sudah menipis atau berada di bawah batas minimum agar pembelian kepada pemasok dapat dilakukan sebelum barang habis. | Barang, Stok Minimum, Pesanan Pembelian |
 | KI-05 | Pihak toko perlu membandingkan jumlah barang yang dipesan dari pemasok dengan jumlah yang benar-benar diterima untuk mengetahui barang mana yang kurang atau lebih. | Pesanan Pembelian, Detail Pesanan Pembelian, Penerimaan Barang, Detail Penerimaan, Pemasok |
-| KI-06 | Pihak toko perlu mengetahui tagihan pemasok yang belum dibayar, jumlahnya, dan tagihan yang sudah mendekati atau melewati tanggal jatuh tempo. | Tagihan Pemasok, Pemasok, Pembayaran Tagihan |
+| KI-06 | Pihak toko perlu mengetahui tagihan pemasok yang belum dibayar, jumlahnya, dan tagihan yang sudah mendekati atau melewati tanggal jatuh tempo. | Tagihan Pemasok, data pemasok, dan data pembayaran tagihan
 | KI-07 | Petugas toko perlu dapat menemukan barang dan harga dengan lebih cepat menggunakan nama, kode barang, atau barcode yang tersedia sehingga proses melayani pembeli tidak terlalu lama. | Barang, Kode Barang, Barcode, Harga Jual |
 | KI-08 | Pihak toko perlu mengetahui program hadiah yang sedang dicatat dan status klaim hadiah pelanggan agar riwayat klaim dapat ditelusuri kembali. | Program Hadiah, Klaim Hadiah, Pelanggan |
 
