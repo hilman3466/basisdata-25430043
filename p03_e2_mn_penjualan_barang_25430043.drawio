@@ -1,0 +1,44 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="e2-mn-penjualan-barang" name="E.2 Relasi M:N">
+    <mxGraphModel dx="1164" dy="685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontStyle=1;fontColor=#17365D;" value="LATIHAN E.2 — RELASI BANYAK-KE-BANYAK (M:N)" vertex="1">
+          <mxGeometry height="45" width="1000" x="100" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#475569;" value="Koperasi Mahasiswa Sejahtera (Kopma) • diagram alternatif tanpa entitas asosiatif" vertex="1">
+          <mxGeometry height="28" width="1000" x="100" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="penjualan" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=0;align=left;verticalAlign=middle;spacing=12;fontColor=#172554;" value="PENJUALAN&#xa;────────────────────&#xa;PK  id_penjualan&#xa;AK  no_nota_penjualan&#xa;tanggal_waktu&#xa;FK  id_petugas&#xa;FK  id_anggota (opsional)&#xa;jumlah_pembayaran" vertex="1">
+          <mxGeometry height="280" width="350" x="100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="barang" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=14;fontStyle=0;align=left;verticalAlign=middle;spacing=12;fontColor=#14532D;" value="BARANG&#xa;────────────────────&#xa;PK  id_barang&#xa;AK  kode_barang&#xa;nama_barang&#xa;kategori&#xa;harga_jual&#xa;stok&#xa;batas_minimum_stok&#xa;barcode (jika ada)" vertex="1">
+          <mxGeometry height="280" width="350" x="750" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_mn" edge="1" parent="1" source="penjualan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;startArrow=ERzeroToMany;startFill=0;endArrow=ERzeroToMany;endFill=0;fontSize=14;fontStyle=1;fontColor=#334155;labelBackgroundColor=#FFFFFF;align=center;verticalAlign=middle;" target="barang" value="memuat / tercantum dalam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_left" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="0..N" vertex="1">
+          <mxGeometry height="30" width="75" x="455" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="card_right" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=14;fontStyle=1;fontColor=#334155;align=center;verticalAlign=middle;" value="0..N" vertex="1">
+          <mxGeometry height="30" width="75" x="670" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="note_title" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=15;fontStyle=1;fontColor=#92400E;" value="Apa yang tidak bisa dicatat langsung pada relasi M:N ini?" vertex="1">
+          <mxGeometry height="30" width="980" x="110" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FDBA74;fontSize=13;align=left;verticalAlign=middle;spacing=12;fontColor=#7C2D12;" value="Jumlah barang per transaksi (qty), harga saat transaksi, dan subtotal setiap baris tidak memiliki tempat atribut tersendiri. Pada ERD utama, detail_penjualan diperlukan untuk menyimpan rincian tersebut." vertex="1">
+          <mxGeometry height="100" width="980" x="110" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#64748B;" value="PK = kunci primer • AK = kunci alternatif • FK = kunci tamu | Diagram ini sengaja menampilkan relasi M:N langsung untuk latihan E.2, bukan ERD utama." vertex="1">
+          <mxGeometry height="38" width="1000" x="100" y="625" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
