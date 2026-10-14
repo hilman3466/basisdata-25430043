@@ -34,7 +34,16 @@ riwayat pesanan lebih mudah dicatat.
 
 ## Catatan Pertemuan 1
 
-
-
 Lingkungan kerja praktikum menggunakan XAMPP dan MariaDB. Repository digunakan untuk menyimpan skrip, laporan, dan bukti praktikum.
 
+## Berkas Praktikum Pertemuan 3
+
+Laporan dan diagram untuk Modul 3 disimpan pada repository ini.
+
+- Laporan Markdown: `laporan/p03_laporan_25430043.md`
+- Laporan Word: `laporan/p03_laporan_25430043.docx`
+- Laporan PDF: `laporan/p03_laporan_25430043.pdf`
+- Sumber ERD Toko Sempurna Hemat: `p03_erd_25430043.drawio`
+- Sumber ERD Kopma: `p03_erd_kopma_25430043.drawio`
+- Gambar ERD proyek: `laporan/img/p03_erd_25430043.png`
+- Gambar ERD Kopma: `laporan/img/p03_erd_kopma_25430043.png`
