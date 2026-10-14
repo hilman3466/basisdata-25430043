@@ -1,0 +1,194 @@
+# Laporan Praktikum Basis Data — Pertemuan 3
+## Perancangan ERD Konseptual
+
+**Nama:** HILMAN AHMAD ROSYAD  
+**NIM:** 25430043  
+**Kelas:** B  
+**Mata Kuliah:** Praktikum Basis Data  
+**Dosen:** Dedi Irawan, S.Kom., M.T.I.  
+**Tanggal:** 13 Oktober 2026  
+**Tema Proyek:** Toko Daring  
+**Nama Usaha:** Toko Sempurna Hemat
+
+---
+
+## 1. Tujuan Praktikum
+
+Praktikum ini bertujuan mengembangkan kebutuhan data pada Pertemuan 2 menjadi Entity Relationship Diagram (ERD) konseptual. Kegiatan meliputi penentuan entitas dan atribut, penandaan kunci, pemisahan entitas asosiatif, penentuan relasi dan kardinalitas, serta penelusuran kebutuhan informasi (KI) melalui ERD. Rancangan diperiksa kembali terhadap aturan bisnis agar dapat menjadi dasar untuk tahap perancangan berikutnya.
+
+## 2. Ringkasan Dasar Teori
+
+ERD digunakan untuk menggambarkan entitas, atribut, kunci, dan hubungan antarentitas. Pada tahap konseptual, rancangan berfokus pada kebutuhan data dan aturan bisnis, bukan pada tipe data atau DBMS tertentu. Primary key (PK) membedakan setiap kemunculan entitas, sedangkan foreign key (FK) menunjukkan hubungan ke entitas lain. Kardinalitas menunjukkan batas minimum dan maksimum partisipasi pada relasi. Hubungan banyak-ke-banyak yang mempunyai atribut sendiri, seperti jumlah barang atau harga pada saat transaksi, dimodelkan melalui entitas asosiatif.
+
+## 3. Hasil Langkah Percobaan
+
+### 3.1 D.1 — Dari Entitas Kandidat ke Entitas (Kopma)
+
+Entitas kandidat ditelaah untuk menentukan identitas yang stabil, atribut kunci alternatif, dan atribut yang nilainya dapat dihitung. `id_anggota` digunakan sebagai kunci primer internal, sementara nomor anggota dan NIM dapat menjadi kunci alternatif jika keunikannya dijaga. Nomor nota juga harus unik. Nilai seperti subtotal dapat dihitung dari jumlah dan harga satuan sehingga perlu dibedakan dari atribut dasar.
+
+Data pembelian dipisahkan menjadi entitas pembelian dan detail pembelian. Entitas pembelian menyimpan informasi umum transaksi, sedangkan detail pembelian mencatat setiap barang, jumlah, dan harga beli. Pemisahan ini mencegah informasi pada tingkat transaksi tercampur dengan informasi pada tingkat baris barang.
+
+| Entitas kandidat Kopma | Contoh elemen data | Catatan rancangan |
+|---|---|---|
+| Anggota | id_anggota, no_anggota, NIM, nama, program studi, nomor HP, status aktif | `id_anggota` sebagai PK; nomor anggota dan NIM dapat dijaga unik |
+| Barang | id_barang, kode_barang, nama, kategori, harga jual, stok, stok minimum | Kode barang harus unik; subtotal bukan atribut dasar barang |
+| Penjualan | id_penjualan, no_nota, waktu penjualan, petugas, anggota jika ada | Nomor nota harus unik; anggota dapat bersifat opsional sesuai aturan pembeli umum |
+| Detail Penjualan | id_penjualan, id_barang, qty, harga saat transaksi | Entitas asosiatif dengan kunci gabungan dan atribut transaksi sendiri |
+| Petugas | id_petugas, nama petugas, peran | Menyimpan petugas yang melayani atau menjalankan proses |
+| Pemasok | id_pemasok, nama, telepon, alamat | Menyimpan identitas pemasok |
+| Pembelian | id_pembelian, nomor faktur, tanggal, pemasok | Menyimpan informasi umum pembelian |
+| Detail Pembelian | id_pembelian, id_barang, jumlah, harga beli | Memisahkan rincian barang dari informasi umum pembelian |
+| Riwayat Poin | id_riwayat_poin, anggota, tanggal, jenis transaksi, jumlah poin | Diperlukan bila perolehan dan penggunaan poin harus dapat ditelusuri |
+
+### 3.2 D.2 — Menentukan Relasi dan Kardinalitas (Kopma)
+
+Kardinalitas ditentukan dari aturan bisnis, bukan berdasarkan perkiraan. Tabel berikut merangkum relasi utama pada latihan Kopma.
+
+| Relasi | Sisi kiri | Sisi kanan | Dasar |
+|---|---|---|---|
+| Petugas melayani penjualan | Tepat satu petugas per penjualan | Nol atau banyak penjualan per petugas | Proses pelayanan kasir |
+| Anggota melakukan penjualan | Nol atau satu anggota per penjualan | Nol atau banyak penjualan per anggota | AB-02 Kopma |
+| Penjualan berisi detail penjualan | Satu atau banyak detail per penjualan | Tepat satu penjualan per detail | AB-01 Kopma |
+| Barang tercantum di detail penjualan | Tepat satu barang per detail | Nol atau banyak detail per barang | AB-04 Kopma |
+| Pemasok menerima pembelian | Tepat satu pemasok per pembelian | Nol atau banyak pembelian per pemasok | AB-06 Kopma |
+| Pembelian berisi detail pembelian | Satu atau banyak detail per pembelian | Tepat satu pembelian per detail | Fakta pada faktur pemasok |
+
+### 3.3 D.3 — ERD Kopma
+
+Berkas sumber diagram Kopma tersedia di repository: [`p03_erd_kopma_25430043.drawio`](../p03_erd_kopma_25430043.drawio). Diagram perlu diperiksa dalam tampilan draw.io untuk memastikan nama relasi, kunci, dan notasi kardinalitas terbaca. Gambar PNG yang disertakan sebagai bukti harus merupakan ekspor dari sumber diagram yang sama.
+
+### 3.4 D.4 — Penelusuran Kebutuhan Informasi (KI) Kopma
+
+| Kode | Kebutuhan informasi | Jalur pada ERD | Status pemeriksaan |
+|---|---|---|---|
+| KI-01 | Omzet dan jumlah nota per hari dan per bulan | Penjualan → Detail Penjualan | Dapat ditelusuri melalui data transaksi dan rinciannya |
+| KI-02 | Lima barang terlaris per bulan berdasarkan jumlah terjual | Barang → Detail Penjualan → Penjualan | Dapat ditelusuri melalui barang dan rincian penjualan |
+| KI-03 | Barang dengan stok di bawah batas minimum | Barang | Dapat ditelusuri dari stok dan stok minimum |
+| KI-04 | Sepuluh anggota dengan belanja terbesar per bulan | Anggota → Penjualan → Detail Penjualan | Dapat ditelusuri jika hubungan anggota pada penjualan tersedia |
+| KI-05 | Jumlah poin loyalitas setiap anggota, termasuk perolehan dan penggunaan | Anggota → Riwayat Poin | Perlu dipastikan bahwa entitas Riwayat Poin dan relasinya tercantum pada diagram final |
+
+### 3.5 Validasi KI Kopma
+
+Kebutuhan KI-05 tidak cukup dipenuhi dengan menyimpan saldo poin saat ini saja apabila riwayat perolehan dan penggunaan juga perlu diperiksa. Entitas `riwayat_poin` digunakan untuk mencatat perubahan poin dari waktu ke waktu. Bila diagram final belum memuat entitas atau relasi tersebut, diagram harus diperbarui sebelum dinyatakan lengkap.
+
+## 4. Jawaban Titik Analisis
+
+### Titik Analisis 1 — Pemilihan kunci primer anggota
+
+`id_anggota` digunakan sebagai kunci primer karena merupakan identitas internal yang stabil dan tidak bergantung pada perubahan data identitas. Nomor anggota dan NIM tetap dapat dipakai sebagai kunci alternatif apabila harus unik. Jika NIM dijadikan PK, perubahan atau koreksi NIM dapat berdampak pada seluruh tabel yang memakai NIM sebagai FK. Dengan `id_anggota`, perubahan NIM tidak mengubah identitas internal anggota.
+
+### Titik Analisis 2 — Kardinalitas penjualan dan detail penjualan
+
+Relasi penjualan ke detail penjualan mempunyai kardinalitas satu atau banyak karena setiap penjualan yang sah harus berisi sekurang-kurangnya satu baris barang (AB-01 Kopma). Kunci asing dapat memastikan setiap detail terkait dengan penjualan yang ada, tetapi keberadaan minimal satu detail untuk setiap penjualan tidak selalu dapat dijamin hanya oleh constraint tabel biasa. Aturan tersebut perlu dijaga oleh proses transaksi atau mekanisme validasi yang tepat.
+
+### Titik Analisis 3 — Petugas gudang yang menerima barang
+
+Jika ERD hanya menghubungkan pemasok dengan pembelian tanpa mencatat petugas yang menerima atau memeriksa barang, ERD belum dapat menjawab siapa petugas gudang yang menangani penerimaan. Relasi penerimaan ke petugas perlu ditambahkan dan keputusan tersebut dicatat sebagai aturan bisnis agar tanggung jawab pemeriksaan dapat ditelusuri.
+
+## 5. Hasil Latihan dan Modifikasi
+
+### 5.1 E.1 — Poin Loyalitas
+
+Riwayat poin lebih tepat dicatat dalam entitas tersendiri apabila sistem harus mengetahui kapan poin diperoleh dan digunakan. Menyimpan saldo poin saja hanya menunjukkan jumlah saat ini dan tidak menjelaskan perubahan yang menghasilkan saldo tersebut. Entitas riwayat perlu memiliki identitas, anggota terkait, tanggal, jenis transaksi, jumlah poin, serta keterangan yang diperlukan.
+
+### 5.2 E.2 — Relasi Banyak-ke-Banyak Penjualan dan Barang
+
+Satu penjualan dapat berisi beberapa barang dan satu barang dapat muncul pada banyak penjualan. Jika kedua entitas dihubungkan langsung dengan relasi banyak-ke-banyak, data pada tingkat baris transaksi—seperti jumlah yang dibeli dan harga saat transaksi—tidak memiliki tempat penyimpanan yang jelas. Karena itu, ERD utama menggunakan entitas asosiatif `detail_penjualan` untuk menyimpan rincian tersebut.
+
+## 6. Tugas Mandiri — Milestone Proyek 3
+
+### 6.1 F.1 — ERD Proyek Toko Sempurna Hemat
+
+ERD proyek diturunkan dari kebutuhan data Toko Sempurna Hemat pada Pertemuan 2. Entitas yang dirancang meliputi Pelanggan, Petugas, Barang, Pemasok, Pesanan, Detail Pesanan, Penjualan, Detail Penjualan, Pesanan Pembelian, Detail Pesanan Pembelian, Penerimaan Barang, Detail Penerimaan, Tagihan Pemasok, Pembayaran Tagihan, Program Hadiah, dan Klaim Hadiah. Entitas detail digunakan untuk menyimpan atribut pada tingkat rincian transaksi.
+
+Sumber diagram proyek dapat dibuka melalui [`p03_erd_25430043.drawio`](../p03_erd_25430043.drawio). Untuk memenuhi bukti Modul 3, ekspor sumber tersebut dari draw.io menjadi PNG dan pastikan gambar yang dipakai benar-benar menampilkan ERD Toko Sempurna Hemat milik proyek ini.
+
+### 6.2 F.2 — Tabel Relasi dan Kardinalitas
+
+| Relasi | Sisi kiri | Sisi kanan | Dasar aturan bisnis |
+|---|---|---|---|
+| Pelanggan membuat pesanan | Nol atau banyak pesanan per pelanggan | Tepat satu pelanggan per pesanan | PB-05, PB-07; AB-05, AB-06 |
+| Pesanan berisi detail pesanan | Satu atau banyak detail per pesanan | Tepat satu pesanan per detail | AB-05 |
+| Barang tercantum di detail pesanan | Nol atau banyak detail per barang | Tepat satu barang per detail | AB-01, AB-05 |
+| Penjualan berisi detail penjualan | Satu atau banyak detail per penjualan | Tepat satu penjualan per detail | AB-03, AB-10 |
+| Pemasok terkait pesanan pembelian | Nol atau banyak pesanan per pemasok | Tepat satu pemasok per pesanan pembelian | AB-11 |
+| Pesanan pembelian berisi detail | Satu atau banyak detail per pesanan pembelian | Tepat satu pesanan pembelian per detail | AB-11 |
+
+Catatan: kardinalitas akhir perlu dicocokkan dengan aturan bisnis P02 dan simbol pada diagram. Untuk membandingkan barang yang dipesan dengan barang yang diterima, ERD juga perlu mempunyai jalur yang menghubungkan detail pesanan pembelian dengan penerimaan yang terkait.
+
+### 6.3 F.3 — Tabel Penelusuran KI ke ERD
+
+| Kode | Kebutuhan informasi dari P02 | Jalur pada ERD | Hasil pemeriksaan |
+|---|---|---|---|
+| KI-01 | Mengetahui pesanan yang masih diproses dan yang sudah siap diambil | Pelanggan → Pesanan | Dapat menelusuri pesanan; status harus tersedia pada entitas Pesanan |
+| KI-02 | Menelusuri penambahan atau pembatalan sebagian barang dalam pesanan | Pesanan → Detail Pesanan → Barang | Sebagian; atribut status barang membantu, tetapi riwayat perubahan perlu didefinisikan bila harus disimpan terpisah |
+| KI-03 | Mengetahui jumlah penjualan dan barang yang paling sering terjual | Penjualan → Detail Penjualan → Barang | Dapat ditelusuri |
+| KI-04 | Mengetahui barang yang stoknya di bawah batas minimum | Barang | Dapat ditelusuri dari stok dan stok minimum |
+| KI-05 | Membandingkan jumlah barang yang dipesan kepada pemasok dengan jumlah yang diterima | Pesanan Pembelian → Detail Pesanan Pembelian; Penerimaan Barang → Detail Penerimaan | Belum sepenuhnya terverifikasi; perlu hubungan yang jelas antara pesanan pembelian dan penerimaan terkait |
+| KI-06 | Mengetahui tagihan pemasok yang belum dibayar atau mendekati jatuh tempo | Pemasok → Tagihan Pemasok → Pembayaran Tagihan | Dapat ditelusuri jika FK dan kardinalitas pembayaran sesuai kebutuhan riwayat pembayaran |
+| KI-07 | Mencari barang dan harga dengan nama, kode, atau barcode | Barang | Dapat ditelusuri jika atribut kode dan barcode ada di kamus data dan ERD |
+| KI-08 | Mengetahui program hadiah dan status klaim pelanggan | Program Hadiah → Klaim Hadiah ← Pelanggan | Dapat ditelusuri jika kedua relasi tersebut tercantum di diagram |
+
+### 6.4 F.4 — Entitas Asosiatif
+
+| Entitas asosiatif | Entitas yang dihubungkan | Atribut sendiri yang dicatat |
+|---|---|---|
+| `detail_pesanan` | Pesanan dan Barang | `id_pesanan`, `id_barang`, `qty`, `harga_satuan`, `status_barang` |
+| `detail_penjualan` | Penjualan dan Barang | `id_penjualan`, `id_barang`, `qty_penjualan`, `harga_satuan_penjualan` |
+| `detail_pesanan_pembelian` | Pesanan Pembelian dan Barang | `id_pesanan_pembelian`, `id_barang`, `qty_pesan`, `harga_beli` |
+| `detail_penerimaan` | Penerimaan Barang dan Barang | `id_penerimaan`, `id_barang`, `qty_terima`, `selisih` |
+
+Entitas detail menjadi tempat untuk mencatat informasi yang berlaku pada setiap baris transaksi. Contohnya, harga satuan saat pemesanan atau penjualan perlu dipertahankan sebagai nilai historis agar perubahan harga pada master Barang tidak mengubah catatan transaksi yang lama.
+
+### 6.5 F.5 — Kelengkapan ERD Konseptual
+
+| No. | Komponen yang diperiksa | Hasil pemeriksaan |
+|---:|---|---|
+| 1 | Entitas sesuai kebutuhan data P02 | Perlu dicocokkan; data pembayaran tagihan pada kamus data perlu disinkronkan dengan daftar entitas kandidat |
+| 2 | Atribut setiap entitas sesuai kamus data | Perlu disinkronkan, terutama atribut relasi ke penerimaan dan program hadiah |
+| 3 | Primary key setiap entitas telah ditentukan | Dirancang; kunci gabungan pada entitas detail perlu diverifikasi pada diagram |
+| 4 | Relasi ant entitas sesuai aturan bisnis | Perlu divalidasi, termasuk petugas penerimaan dan keterkaitan pesanan pembelian dengan penerimaan |
+| 5 | Kardinalitas pada setiap relasi | Perlu diperiksa terhadap aturan bisnis P02 |
+| 6 | Entitas asosiatif memiliki atribut sendiri | Terpenuhi pada rancangan untuk rincian transaksi |
+| 7 | Jalur ERD dapat menelusuri seluruh KI | Belum sepenuhnya terverifikasi; KI-02 dan KI-05 membutuhkan pemeriksaan lanjutan |
+
+Pemeriksaan ini menunjukkan bahwa diagram sudah menggambarkan proses utama, tetapi konsistensi ERD, kamus data P02, dan beberapa jalur KI masih harus disinkronkan sebelum rancangan dianggap final. Catatan pemeriksaan dituliskan secara terbuka agar perbaikan berikutnya dapat dilacak.
+
+### 6.6 F.6 — Review Teman Kelas
+
+Catatan berikut menggunakan masukan yang dicatat pada draf laporan. Pastikan nama peninjau dan isi masukan sesuai dengan diskusi yang benar-benar dilakukan.
+
+| Nama peninjau | Masukan/saran | Keputusan | Perbaikan atau tindak lanjut |
+|---|---|---|---|
+| Faiz | Hubungan Pesanan dan Detail Pesanan perlu dilengkapi kardinalitas agar lebih jelas. | Diterima | Kardinalitas diperjelas: satu pesanan memiliki satu atau lebih detail; setiap detail terkait dengan satu pesanan. |
+| Restu | Atribut harga pada Detail Pesanan perlu dijelaskan karena harga barang dapat berubah. | Diterima | `harga_satuan` dipertahankan pada Detail Pesanan untuk mencatat harga pada waktu pemesanan. |
+
+## 7. Pembahasan dan Kendala
+
+Kendala utama pada perancangan ERD adalah menentukan hubungan antarentitas dan memastikan setiap entitas memiliki atribut serta kunci yang sesuai. Banyaknya entitas juga membuat penataan diagram perlu diperhatikan supaya nama entitas, atribut, dan kardinalitas tetap terbaca. Pemeriksaan terhadap dokumen P02 menemukan beberapa hal yang perlu disinkronkan, yaitu keterkaitan pesanan pembelian dengan penerimaan barang, pencatatan petugas penerimaan, serta hubungan program hadiah dengan barang. Beberapa jalur KI harus diverifikasi kembali sebelum ERD digunakan sebagai dasar normalisasi.
+
+## 8. Kesimpulan
+
+Pada Modul 3, kebutuhan data Toko Sempurna Hemat dikembangkan menjadi rancangan ERD konseptual yang memuat entitas, atribut, kunci, relasi, kardinalitas, dan entitas asosiatif. Rancangan ini membantu menggambarkan proses pesanan pelanggan, penjualan, pembelian, penerimaan barang, tagihan pemasok, serta program hadiah. Sebelum dilanjutkan ke normalisasi, ERD perlu dicocokkan kembali dengan kamus data P02 dan jalur kebutuhan informasi, terutama pada hubungan pesanan pembelian dengan penerimaan barang.
+
+## 9. Pernyataan Penggunaan Bantuan AI
+
+AI digunakan sebagai alat bantu untuk memahami materi ERD, menyusun draf tabel, serta merapikan penjelasan. Isi laporan dan rancangan tetap harus diperiksa terhadap dokumen P02, diagram yang benar-benar dibuat, dan masukan teman yang benar-benar diterima. Keputusan akhir mengenai rancangan tetap menjadi tanggung jawab mahasiswa.
+
+## 10. Bukti Git dan Daftar Berkas
+
+- Repository: [hilman3466/basisdata-25430043](https://github.com/hilman3466/basisdata-25430043)
+- Sumber ERD proyek: [`p03_erd_25430043.drawio`](../p03_erd_25430043.drawio)
+- Sumber ERD Kopma: [`p03_erd_kopma_25430043.drawio`](../p03_erd_kopma_25430043.drawio)
+- Commit laporan ini: **isi dengan hash commit aktual setelah berkas diunggah ke branch `main`**.
+- Pesan commit yang disarankan: `p03: tambah laporan praktikum modul 3`.
+
+### Checklist sebelum dikumpulkan
+
+- [ ] ERD proyek dan ERD Kopma dapat dibuka dari sumber `.drawio`.
+- [ ] PNG hasil ekspor benar-benar berasal dari diagram milik sendiri dan terbaca saat diperiksa.
+- [ ] Tabel relasi/kardinalitas merujuk pada aturan bisnis P02.
+- [ ] Semua KI telah ditelusuri; jalur yang belum tercakup sudah diperbaiki atau dijelaskan.
+- [ ] Minimal dua masukan teman dan keputusan dicatat sesuai diskusi sebenarnya.
+- [ ] Laporan ini diunggah sebagai `laporan/p03_laporan_25430043.md`.
+- [ ] Hash commit dan bukti Git yang ditampilkan berasal dari perubahan nyata pada repository.
