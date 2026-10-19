@@ -65,22 +65,16 @@ Contoh struktur relasi 1NF:
 
 | Nama Relasi | Atribut | Kunci sementara |
 |---|---|---|
-| `PESANAN_1NF` | `no_pesanan`, `kode_barang`, `tanggal_pesanan`, `nama_pelanggan`, `no_whatsapp`, `sumber_pesanan`, `nama_barang`, `qty_pesanan`, `harga_satuan_pesanan`, `status_barang_pesanan`, `status_pesanan` | (`no_pesanan`, `kode_barang`) |
-
-Kunci gabungan tersebut masih bersifat sementara dan menggunakan asumsi bahwa satu jenis barang hanya dicatat satu kali dalam satu pesanan. Asumsi ini perlu diperiksa terhadap kebutuhan pencatatan perubahan barang dan atribut `id_detail_pesanan` yang telah dicantumkan pada kamus data P02.
-
-Setelah kelompok barang dipisahkan, struktur tersebut tidak lagi menyimpan daftar barang sebagai kelompok berulang. Namun, informasi pesanan, pelanggan, dan barang masih berpotensi berulang antarbaris. Karena itu, tahap berikutnya memeriksa ketergantungan parsial untuk menentukan pemisahan pada 2NF.
-
-Kunci gabungan di atas masih bersifat sementara. Kunci tersebut
-mengasumsikan satu jenis barang hanya mempunyai satu baris dalam
+| `PESANAN_1NF` | `no_pesanan`, `kode_barang`, `tanggal_pesanan`, `nama_pelanggan`, `no_whatsapp`, `sumber_pesanan`, `nama_barang`, `qty_pesanan`, `harga_satuan_pesanan`, `status_barang_pesanan`, `subtotal`, `potongan`, `total`, `status_pesanan`, `catatan_perubahan`, `disiapkan_oleh`, `diperiksa_oleh`, `waktu_siap_diambil`, `waktu_diambil` | (`no_pesanan`, `kode_barang`) |
+Kunci gabungan tersebut masih bersifat sementara. Kunci itu
+mengasumsikan satu jenis barang hanya memiliki satu baris dalam
 satu pesanan.
 
-Pada ERD Modul 3, Detail Pesanan memakai gabungan `id_pesanan`
-dan `id_barang`, sedangkan kamus data Modul 2 juga mencantumkan
-#### F.3.2 Bentuk Normal Kedua (2NF)
-
+Pada ERD Modul 3, entitas `detail_pesanan` memakai kunci gabungan
+`id_pesanan` dan `id_barang`. Sementara itu, kamus data P02 juga
+mencantumkan `id_detail_pesanan`. Perbedaan ini akan dievaluasi
+sebelum skema akhir ditetapkan.
 Pada tahap 1NF, setiap baris sudah mewakili satu jenis barang dalam sebuah pesanan. Namun, masih ada data yang sebenarnya bergantung pada sebagian kunci gabungan saja.
-
 Contohnya, nama barang bergantung pada kode barang, sedangkan tanggal dan status pesanan bergantung pada nomor pesanan. Data tersebut tidak perlu diulang pada setiap baris rincian barang.
 
 Karena itu, data dipisahkan menjadi tiga relasi berikut.
@@ -170,3 +164,5 @@ Setelah melakukan normalisasi, saya membandingkan hasil relasi dengan ERD pada M
 Usulan tersebut belum diterapkan pada berkas `p03_erd_25430043.drawio`. Khusus perubahan kunci `DETAIL_PESANAN`, rancangan perlu diperiksa kembali terhadap aturan keunikan barang dalam satu pesanan. Jika satu jenis barang hanya boleh memiliki satu baris dalam satu pesanan, aturan tersebut perlu tetap ditegakkan pada skema akhir.
 
 Perubahan ERD akan dilakukan setelah hasil normalisasi dan kunci setiap relasi diperiksa kembali. Dengan cara ini, diagram akhir diharapkan sesuai dengan kebutuhan data pada Modul 2 dan hasil normalisasi pada Modul 4.
+
+![ERD acuan Modul 3 yang belum diperbarui](p04_erd_update_25430043.drawio.png)
