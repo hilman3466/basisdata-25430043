@@ -151,7 +151,10 @@ ANGGOTA (
 
 Pada susunan tersebut, `no_nota_penjualan` menjadi kunci utama sementara untuk `PENJUALAN`, sedangkan gabungan `no_nota_penjualan` dan `kode_barang` menjadi kunci utama sementara untuk `DETAIL_PENJUALAN`. Hubungan antara tabel penjualan, detail penjualan, barang, petugas, dan anggota dapat ditelusuri tanpa harus menyimpan nama petugas serta nama anggota berulang kali pada setiap nota.
 
+Atribut `bayar_penjualan` dipertahankan pada skema relasional hasil normalisasi karena sudah tercantum pada entitas `PENJUALAN` di ERD P03 Kopma. Atribut ini tidak tercantum pada bentuk UNF contoh buku yang berfokus pada informasi nota dan rincian barang, sehingga penempatannya merupakan penyesuaian saat hasil normalisasi dipetakan ke rancangan Kopma.
+
 Nilai `subtotal_detail_penjualan`, `jumlah_penjualan`, dan `total_penjualan` tidak dimasukkan ke skema operasional karena dapat dihitung dari rincian penjualan dan aturan diskon anggota. Harga satuan tetap dicatat pada `DETAIL_PENJUALAN`, mengikuti AB-04, agar harga transaksi lama tidak berubah ketika harga jual pada tabel `BARANG` diperbarui.
+
 ## D.4 Mencocokkan dengan Skema Kanonik
 
 Setelah tahap normalisasi selesai, hasilnya dicocokkan dengan skema kanonik pada buku praktikum. Pada skema akhir, beberapa tabel menggunakan `id_*` sebagai primary key (PK), sedangkan kode alami seperti nomor nota tetap dipertahankan sebagai nilai unik.
