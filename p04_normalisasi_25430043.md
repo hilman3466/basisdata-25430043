@@ -167,4 +167,4 @@ Usulan tersebut belum diterapkan pada berkas `p03_erd_25430043.drawio`. Khusus p
 
 Perubahan ERD akan dilakukan setelah hasil normalisasi dan kunci setiap relasi diperiksa kembali. Dengan cara ini, diagram akhir diharapkan sesuai dengan kebutuhan data pada Modul 2 dan hasil normalisasi pada Modul 4.
 
-![ERD acuan Modul 3 yang belum diperbarui](laporan/img/p04_erd_update_25430043.drawio.png)
+![ERD hasil pembaruan Modul 4](laporan/img/p04_erd_update_25430043.drawio.png)
