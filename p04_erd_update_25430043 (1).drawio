@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" agent="ChatGPT">
+  
+  
+  
+  
+  
+  
+  
+  
+  <diagram id="erd-tsh-final" name="ERD Toko Sempurna Hemat">
+    
+    
+    
+    
+    
+    
+    
+    
+    <mxGraphModel dx="1221" dy="2234" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1650" math="0" shadow="0">
+      
+      
+      
+      
+      
+      
+      
+      
+      <root>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="0"/>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;fontSize=26;fontColor=#17365D;" value="ERD TOKO SEMPURNA HEMAT Modul 4 — Hasil Normalisasi" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="70" width="1400" x="500" y="20" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_pelanggan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#6A1B9A;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#6A1B9A;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #6A1B9A;&quot;&gt;PELANGGAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pelanggan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;nama_pelanggan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(100) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_whatsapp&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(20)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="124" width="300" x="70" y="150" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_pesanan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#2E7D32;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#2E7D32;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #2E7D32;&quot;&gt;PESANAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pelanggan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pelanggan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;sumber_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;WA/aplikasi&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;potongan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_petugas_penyiap&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ petugas&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_petugas_pemeriksa&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ petugas&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;waktu_siap_diambil&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;waktu_diambil&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="360" width="320" x="70" y="390" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_detail_pesanan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#EF6C00;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#EF6C00;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #EF6C00;&quot;&gt;DETAIL_PESANAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_detail_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pesanan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ barang&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;qty&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;harga_satuan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="214" width="320" x="440" y="390" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_barang" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#C62828;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#C62828;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #C62828;&quot;&gt;BARANG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;kode_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;nama_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(120) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;kategori&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(60)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;harga_jual&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;stok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;stok_minimum&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;barcode&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(50)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="274" width="320" x="810" y="150" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_petugas" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#6A1B9A;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#6A1B9A;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #6A1B9A;&quot;&gt;PETUGAS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_petugas&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;nama_petugas&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(100) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;peran_petugas&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(50) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="124" width="300" x="1210" y="150" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_penjualan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#2E7D32;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#2E7D32;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #2E7D32;&quot;&gt;PENJUALAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_penjualan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_nota&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_penjualan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_petugas&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ petugas&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;metode_pembayaran&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(40)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="184" width="320" x="1210" y="390" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_detail_penjualan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#EF6C00;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#EF6C00;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #EF6C00;&quot;&gt;DETAIL_PENJUALAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_penjualan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ penjualan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ barang&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;qty&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;harga_satuan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="154" width="320" x="1580" y="390" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_pemasok" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#1565C0;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#1565C0;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #1565C0;&quot;&gt;PEMASOK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pemasok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;nama_pemasok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(120) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_telepon&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(20)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;alamat&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(200)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="154" width="320" x="1970" y="150" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_pesanan_pembelian" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#1565C0;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#1565C0;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #1565C0;&quot;&gt;PESANAN_PEMBELIAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pesanan_pembelian&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_pesanan_pembelian&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_pemesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pemasok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pemasok&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="184" width="320" x="1970" y="390" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_detail_pesanan_pembelian" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#EF6C00;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#EF6C00;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #EF6C00;&quot;&gt;DETAIL_PESANAN_PEMBELIAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pesanan_pembelian&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pesanan_pembelian&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ barang&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;qty_pesan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;harga_beli&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="154" width="320" x="1970" y="680" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_penerimaan_barang" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#1565C0;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#1565C0;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #1565C0;&quot;&gt;PENERIMAAN_BARANG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_penerimaan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_penerimaan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_penerimaan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pemasok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pemasok&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_dokumen&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(50)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status_penerimaan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="214" width="320" x="1570" y="680" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_detail_penerimaan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#EF6C00;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#EF6C00;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #EF6C00;&quot;&gt;DETAIL_PENERIMAAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_penerimaan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ penerimaan_barang&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_barang&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ barang&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;qty_terima&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;selisih&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="154" width="320" x="1570" y="1010" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_tagihan_pemasok" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#1565C0;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#1565C0;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #1565C0;&quot;&gt;TAGIHAN_PEMASOK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;UNIQUE&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pemasok&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pemasok&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;no_faktur&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(50)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;jatuh_tempo&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;jumlah_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status_pembayaran&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="274" width="320" x="1970" y="1010" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_pembayaran_tagihan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#1565C0;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#1565C0;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #1565C0;&quot;&gt;PEMBAYARAN_TAGIHAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_pembayaran_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_tagihan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ tagihan_pemasok&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_pembayaran&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;jumlah_bayar&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;metode_pembayaran&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(40)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="184" width="320" x="1970" y="1380" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_program_hadiah" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#00897B;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#00897B;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #00897B;&quot;&gt;PROGRAM_HADIAH&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_program&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;nama_program&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(100) &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;keterangan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;TEXT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;periode&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(100)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="154" width="320" x="70" y="1010" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="ent_klaim_hadiah" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#00897B;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#00897B;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #00897B;&quot;&gt;KLAIM_HADIAH&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_klaim&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_program&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ program_hadiah&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#047857&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pelanggan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pelanggan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;tanggal_klaim&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;status_klaim&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(30)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="184" width="320" x="440" y="1010" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pelanggan_pesanan" edge="1" parent="1" source="ent_pelanggan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_pesanan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pesanan_detail" edge="1" parent="1" source="ent_pesanan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ent_detail_pesanan" value="1 : 1..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_barang_detail_pesanan" edge="1" parent="1" source="ent_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.75;entryX=1;entryY=0.5;" target="ent_detail_pesanan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_petugas_penjualan" edge="1" parent="1" source="ent_petugas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_penjualan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_penjualan_detail" edge="1" parent="1" source="ent_penjualan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ent_detail_penjualan" value="1 : 1..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_barang_detail_penjualan" edge="1" parent="1" source="ent_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ent_detail_penjualan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pemasok_pembelian" edge="1" parent="1" source="ent_pemasok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_pesanan_pembelian" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pembelian_detail" edge="1" parent="1" source="ent_pesanan_pembelian" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_detail_pesanan_pembelian" value="1 : 1..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_barang_detail_pembelian" edge="1" parent="1" source="ent_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=1;entryX=0;entryY=0.3;" target="ent_detail_pesanan_pembelian" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pemasok_penerimaan" edge="1" parent="1" source="ent_pemasok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=1;entryX=1;entryY=0.3;" target="ent_penerimaan_barang" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_penerimaan_detail" edge="1" parent="1" source="ent_penerimaan_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_detail_penerimaan" value="1 : 1..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_barang_detail_penerimaan" edge="1" parent="1" source="ent_barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=1;entryX=0;entryY=0.3;" target="ent_detail_penerimaan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pemasok_tagihan" edge="1" parent="1" source="ent_pemasok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=1;entryX=0.5;entryY=0;" target="ent_tagihan_pemasok" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_tagihan_pembayaran" edge="1" parent="1" source="ent_tagihan_pemasok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ent_pembayaran_tagihan" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_program_klaim" edge="1" parent="1" source="ent_program_hadiah" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ent_klaim_hadiah" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pelanggan_klaim" edge="1" parent="1" source="ent_pelanggan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=1;entryX=0;entryY=0;" target="ent_klaim_hadiah" value="1 : 0..N">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        
+        
+        <mxCell id="legend" parent="1" style="text;html=1;whiteSpace=wrap;rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;align=left;verticalAlign=middle;fontSize=13;" value="&lt;div style=&quot;font-family:Arial,sans-serif;font-size:13px;padding:8px;&quot;&gt;&lt;b&gt;KETERANGAN&lt;/b&gt; &amp;nbsp; &lt;span style=&quot;color:#C2410C&quot;&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/span&gt; = Primary Key / kunci utama &amp;nbsp; &lt;span style=&quot;color:#047857&quot;&gt;&lt;b&gt;FK&lt;/b&gt;&lt;/span&gt; = Foreign Key / kunci tamu&lt;br/&gt;&lt;b&gt;Kardinalitas:&lt;/b&gt; 1 : 0..N = satu ke nol atau banyak; 1 : 1..N = satu ke satu atau banyak.&lt;br/&gt;&lt;b&gt;Catatan:&lt;/b&gt; Pesanan pelanggan diambil di toko; tidak ada entitas pengiriman. DETAIL_PESANAN memakai PK id_detail_pesanan. Jika satu barang hanya boleh dicatat sekali per pesanan, terapkan UNIQUE(id_pesanan, id_barang).&lt;/div&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          
+          
+          <mxGeometry height="130" width="1400" x="70" y="1360" as="geometry"/>
+          
+          
+          
+          
+        
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+      
+        
+        
+        
+        <mxCell id="ent_riwayat_perubahan_pesanan" parent="1" style="shape=rect;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#6A1B9A;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontSize=12;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-family:Arial,sans-serif;font-size:12px;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color:#6A1B9A;color:#ffffff;font-weight:bold;font-size:14px;padding:8px;border-bottom:1px solid #6A1B9A;&quot;&gt;RIWAYAT_PERUBAHAN_PESANAN&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:bold;&quot;&gt;id_perubahan_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ pesanan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_detail_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;NULL → detail_pesanan&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;b style=&quot;color:#C2410C&quot;&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;id_petugas&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;INT &lt;span style=&quot;color:#64748B;font-size:10px&quot;&gt;→ petugas&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;waktu_perubahan_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;jenis_perubahan_pesanan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;VARCHAR(40)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:58px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;width:150px;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;font-weight:normal;&quot;&gt;keterangan_perubahan&lt;/td&gt;&lt;td style=&quot;padding:5px;border-bottom:1px solid #E2E8F0;background-color:#FFFFFF;color:#475569;&quot;&gt;TEXT&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          
+          
+          
+          
+          
+          
+          <mxGeometry x="440" y="730" width="420" height="244" as="geometry"/>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_petugas_pesanan_penyiap" value="1 : 0..N (penyiap)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.32;entryX=0;entryY=0.62;" edge="1" parent="1" source="ent_petugas" target="ent_pesanan">
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry">
+            
+            
+            
+            
+            
+            
+            <Array as="points">
+              <mxPoint x="1180" y="190"/>
+              <mxPoint x="1180" y="110"/>
+              <mxPoint x="10" y="110"/>
+              <mxPoint x="10" y="613"/>
+            </Array>
+          </mxGeometry>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_petugas_pesanan_pemeriksa" value="1 : 0..N (pemeriksa)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.75;entryX=0;entryY=0.82;" edge="1" parent="1" source="ent_petugas" target="ent_pesanan">
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry">
+            
+            
+            
+            
+            
+            
+            <Array as="points">
+              <mxPoint x="1160" y="243"/>
+              <mxPoint x="1160" y="130"/>
+              <mxPoint x="50" y="130"/>
+              <mxPoint x="50" y="685"/>
+            </Array>
+          </mxGeometry>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_pesanan_riwayat" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.86;entryX=0;entryY=0.5;" edge="1" parent="1" source="ent_pesanan" target="ent_riwayat_perubahan_pesanan">
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry">
+            
+            
+            
+            
+            
+            
+            <Array as="points">
+              
+              
+              
+              
+              <mxPoint x="415" y="700"/>
+              
+              
+              
+              
+              <mxPoint x="415" y="852"/>
+              
+              
+            
+            
+            </Array>
+            
+            
+          
+          
+          </mxGeometry>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_detail_pesanan_riwayat" value="1 : 0..N (opsional pada riwayat)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ent_detail_pesanan" target="ent_riwayat_perubahan_pesanan">
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry">
+            
+            
+            
+            
+            
+            
+            <Array as="points">
+              
+              
+              
+              
+              <mxPoint x="600" y="640"/>
+              
+              
+              
+              
+              <mxPoint x="650" y="640"/>
+              
+              
+            
+            
+            </Array>
+            
+            
+          
+          
+          </mxGeometry>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+        
+        
+        
+        <mxCell id="rel_petugas_riwayat" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.3;endArrow=ERoneToMany;endFill=0;fontSize=11;fontStyle=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.75;entryX=0.76;entryY=0;" edge="1" parent="1" source="ent_petugas" target="ent_riwayat_perubahan_pesanan">
+          
+          
+          
+          
+          
+          
+          <mxGeometry relative="1" as="geometry">
+            
+            
+            
+            
+            
+            
+            <Array as="points">
+              
+              
+              
+              
+              <mxPoint x="1540" y="242"/>
+              
+              
+              
+              
+              <mxPoint x="1540" y="680"/>
+              
+              
+              
+              
+              <mxPoint x="760" y="680"/>
+              
+              
+            
+            
+            </Array>
+            
+            
+          
+          
+          </mxGeometry>
+          
+          
+          
+        
+        
+        
+        </mxCell>
+        
+        
+        
+      
+      
+      
+      </root>
+      
+      
+      
+      
+    
+    
+    
+    
+    </mxGraphModel>
+    
+    
+    
+    
+  
+  
+  
+  
+  </diagram>
+  
+  
+  
+  
+
+
+
+
+</mxfile>
