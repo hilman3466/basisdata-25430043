@@ -64,7 +64,7 @@ Pada bentuk UNF sebelumnya, informasi barang masih ditulis sebagai kelompok yang
 
 Bentuk relasi 1NF secara sederhana dapat ditulis sebagai berikut.
 
-\`\`\`text
+```text
 PESANAN_1NF (
     no_pesanan,
     tanggal_pesanan,
@@ -87,66 +87,11 @@ PESANAN_1NF (
     waktu_siap_diambil,
     waktu_diambil
 )
-\`\`\`
+```
 
 Pada tahap ini, satu baris mencatat satu jenis barang dalam suatu pesanan. Jika satu pesanan berisi beberapa jenis barang, nomor pesanan dan informasi tingkat pesanan dapat muncul pada beberapa baris. Pengulangan tersebut masih dapat terjadi pada 1NF, sehingga tahap berikutnya diperlukan untuk memisahkan atribut sesuai ketergantungannya.
 
 Bentuk 1NF ini menjadi dasar untuk melanjutkan normalisasi ke bentuk normal kedua (2NF) dan bentuk normal ketiga (3NF).
-### 3NF
-
-Pada tahap 3NF, atribut yang bergantung pada atribut bukan kunci dipisahkan agar tidak terjadi ketergantungan transitif. Contohnya, `kode_petugas` menentukan nama dan peran petugas, sedangkan `no_anggota` menentukan data anggota. Karena itu, data petugas dan anggota disimpan pada tabel masing-masing.
-
-Hasil relasi 3NF yang mengikuti skema pada buku adalah sebagai berikut.
-
-```text
-PENJUALAN (
-    no_nota_penjualan,
-    tgl_penjualan,
-    kode_petugas,
-    no_anggota,
-    bayar_penjualan
-)
-
-DETAIL_PENJUALAN (
-    no_nota_penjualan,
-    kode_barang,
-    qty_detail_penjualan,
-    harga_satuan_detail_penjualan
-)
-
-BARANG (
-    kode_barang,
-    nama_barang,
-    kategori_barang,
-    harga_jual_barang,
-    stok_barang,
-    stok_min_barang
-)
-
-PETUGAS (
-    kode_petugas,
-    nama_petugas,
-    peran_petugas
-)
-
-ANGGOTA (
-    no_anggota,
-    nim_anggota,
-    nama_anggota,
-    prodi_anggota,
-    no_hp_anggota,
-    status_anggota,
-    tgl_daftar_anggota
-)
-```
-
-Pada skema tersebut, `DETAIL_PENJUALAN` menggunakan gabungan `no_nota_penjualan` dan `kode_barang` sebagai kunci. Harga satuan disimpan pada detail transaksi agar perubahan harga jual pada tabel `BARANG` tidak mengubah harga transaksi sebelumnya.
-
-Atribut `bayar_penjualan` dipertahankan pada skema relasional hasil normalisasi karena sudah tercantum pada entitas `PENJUALAN` di ERD P03 Kopma. Atribut ini tidak tercantum pada bentuk UNF contoh buku, sehingga penempatannya merupakan penyesuaian saat hasil normalisasi dipetakan ke rancangan Kopma.
-
-Sesuai keputusan dalam buku, `subtotal_detail_penjualan`, `jumlah_penjualan`, dan `total_penjualan` dihitung dari rincian transaksi serta status anggota, sehingga tidak disimpan sebagai atribut dasar pada tabel operasional. `diskon_penjualan` juga tidak disimpan secara terpisah karena besarnya mengikuti aturan diskon anggota aktif pada AB-02. Keputusan ini membantu menghindari ketidaksesuaian antara nilai turunan dan data transaksi.
-
-Atribut master seperti `kategori_barang`, `harga_jual_barang`, `stok_barang`, dan `stok_min_barang` berasal dari kamus data P02 Kopma. Atribut tersebut melengkapi tabel `BARANG` pada saat hasil normalisasi disesuaikan dengan kebutuhan data proyek.
 
 #### F.3.2 Bentuk Normal Kedua (2NF)
 
