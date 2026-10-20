@@ -167,9 +167,10 @@ Bagian D.3 sebelumnya menjelaskan pemisahan data pada proses penjualan. Untuk me
 | `PENJUALAN` | `id_penjualan` | `no_nota_penjualan` | `id_petugas`, `id_anggota` (boleh NULL) |
 | `DETAIL_PENJUALAN` | (`id_penjualan`, `id_barang`) | — | `id_penjualan`, `id_barang` |
 | `PEMBELIAN` | `id_pembelian` | `no_faktur_pembelian` | `id_pemasok` |
-| `PEMBELIAN` | `id_pembelian` | `no_faktur_pembelian` | `id_pemasok`, `id_petugas_penerima` (opsional) |
 
 Kunci utama pada tabel detail menggunakan gabungan dua atribut karena satu baris menunjukkan satu barang pada satu transaksi. Sementara itu, `no_nota_penjualan` dan `no_faktur_pembelian` dipertahankan sebagai nilai unik agar setiap transaksi bisa dicari melalui nomor dokumennya. Aturan unik kode pemasok juga mengikuti kamus data P02 Kopma.
+
+Catatan: Pada ERD P03 Kopma, `id_petugas_penerima` merupakan pengembangan tambahan dari Titik Analisis 3 buku praktikum. Atribut tersebut dipertahankan sebagai FK opsional pada rancangan P03, tetapi tidak dimasukkan ke skema kanonik utama karena Tabel 4.2 buku hanya mencantumkan `id_pemasok` sebagai FK pada tabel `PEMBELIAN`.
 
 Catatan: `RIWAYAT_POIN` tercantum pada P02 dan ERD P03 sebagai bagian latihan poin loyalitas. Entitas ini merupakan tambahan dari latihan Modul 2, sehingga tidak termasuk dalam daftar skema kanonik utama pada Tabel 4.2 buku praktikum. Jika digunakan dalam skema akhir, relasi dan dependensi fungsionalnya perlu diperiksa secara terpisah.
 
