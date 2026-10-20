@@ -165,6 +165,10 @@ Setelah melakukan normalisasi, saya membandingkan hasil relasi dengan ERD pada M
 
 Usulan tersebut belum diterapkan pada berkas `p03_erd_25430043.drawio`. Khusus perubahan kunci `DETAIL_PESANAN`, rancangan perlu diperiksa kembali terhadap aturan keunikan barang dalam satu pesanan. Jika satu jenis barang hanya boleh memiliki satu baris dalam satu pesanan, aturan tersebut perlu tetap ditegakkan pada skema akhir.
 
-Perubahan ERD akan dilakukan setelah hasil normalisasi dan kunci setiap relasi diperiksa kembali. Dengan cara ini, diagram akhir diharapkan sesuai dengan kebutuhan data pada Modul 2 dan hasil normalisasi pada Modul 4.
+Pembaruan telah diterapkan pada salinan ERD Modul 4. Perubahan meliputi
+penyesuaian kunci DETAIL_PESANAN, penambahan atribut pendukung pada
+PESANAN, serta penambahan RIWAYAT_PERUBAHAN_PESANAN. ERD Modul 3
+yang asli tetap dipertahankan. Kesesuaian akhir relasi dan aturan
+keunikannya masih perlu diperiksa sebelum implementasi.
 
 ![ERD hasil pembaruan Modul 4](laporan/img/p04_erd_update_25430043.drawio.png)
