@@ -172,4 +172,4 @@ Untuk memenuhi KI-05, jumlah yang diterima juga perlu dibandingkan dengan jumlah
 
 Secara keseluruhan, ERD Modul 4 sudah menambahkan hubungan yang sebelumnya belum tergambar dengan jelas, terutama pada riwayat perubahan pesanan, penerimaan barang dari pemasok, pencatatan petugas pemeriksa, dan hubungan program hadiah dengan barang. File P03 tetap dipertahankan, sedangkan perubahan ini diterapkan pada salinan ERD khusus Modul 4.
 
-![ERD hasil pembaruan Modul 4](laporan/img/p04_erd_update_25430043.drawio.png)
+![ERD hasil pembaruan Modul 4](laporan/img/p04_erd_update_25430043.drawio%20%282%29.png)
