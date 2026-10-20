@@ -38,41 +38,60 @@ PESANAN_UNF (
 
 Bagian yang ditulis di antara tanda `{ ... }` adalah rincian barang yang bisa muncul beberapa kali dalam satu pesanan. Data ini kemudian dipisahkan pada tahap normalisasi agar setiap jenis informasi mempunyai tempat penyimpanan yang lebih sesuai.
 
-### 2NF
+### F.2 Menentukan Dependensi Fungsional
 
-Pada tahap 2NF, atribut yang hanya bergantung pada sebagian kunci gabungan dipisahkan dari tabel detail. `nama_barang` bergantung pada `kode_barang`, sedangkan tanggal, petugas, anggota, dan nilai pada tingkat nota bergantung pada `no_nota_penjualan`. Atribut yang masih berhubungan secara transitif tetap dipisahkan pada tahap 3NF.
+Setelah menentukan bentuk data awal (UNF), langkah berikutnya adalah melihat hubungan antaratribut pada data pesanan Toko Sempurna Hemat. Dependensi fungsional digunakan untuk mengetahui atribut mana yang bergantung pada atribut lainnya. Hasil pemeriksaan ini menjadi dasar untuk memisahkan data ke dalam tabel yang lebih teratur.
 
-Hasil pemisahan pada tahap 2NF dapat ditulis sebagai berikut.
+Beberapa dependensi fungsional yang digunakan dalam rancangan ini adalah sebagai berikut.
 
-```text
-PENJUALAN_2NF (
-    no_nota_penjualan,
-    tgl_penjualan,
-    kode_petugas,
-    nama_petugas,
-    no_anggota,
-    nama_anggota,
-    jumlah_penjualan,
-    diskon_penjualan,
-    total_penjualan
-)
+| Kode | Dependensi Fungsional | Keterangan |
+|---|---|---|
+| FD1 | `no_pesanan` → `tanggal_pesanan`, `id_pelanggan`, `sumber_pesanan`, `status_pesanan`, `potongan` | Nomor pesanan menunjukkan informasi utama dari suatu pesanan. |
+| FD2 | `id_pelanggan` → `nama_pelanggan`, `no_whatsapp` | ID pelanggan menentukan data identitas pelanggan. |
+| FD3 | `kode_barang` → `nama_barang`, `kategori`, `harga_jual`, `stok`, `stok_minimum`, `barcode` | Kode barang digunakan untuk mengenali informasi barang, dengan asumsi setiap kode bersifat unik. |
+| FD4 | `id_petugas` → `nama_petugas`, `peran_petugas` | ID petugas menentukan informasi petugas yang tercatat. |
+| FD5 | (`no_pesanan`, `kode_barang`) → `qty_pesanan`, `harga_satuan_pesanan`, `status_barang_pesanan` | Pasangan nomor pesanan dan kode barang menentukan rincian barang, dengan asumsi satu jenis barang hanya dicatat satu kali dalam satu pesanan. |
 
-BARANG_2NF (
+Dependensi tersebut disusun berdasarkan struktur data yang digunakan dalam proyek. Beberapa ketergantungan masih perlu diperhatikan saat data dipisahkan ke dalam tabel, terutama informasi pelanggan, barang, dan petugas yang tidak seharusnya terus berulang pada setiap transaksi.
+
+Untuk kunci gabungan pada rincian pesanan, digunakan asumsi bahwa satu jenis barang hanya muncul satu kali dalam satu pesanan. Jika nantinya aturan toko memperbolehkan barang yang sama dicatat pada beberapa baris berbeda, identitas setiap baris detail perlu dibedakan agar datanya tidak tertukar.
+
+### F.3 Tahapan Normalisasi
+
+#### F.3.1 Bentuk Normal Pertama (1NF)
+
+Pada bentuk UNF sebelumnya, informasi barang masih ditulis sebagai kelompok yang dapat berulang dalam satu pesanan. Agar memenuhi bentuk normal pertama (1NF), setiap baris harus mewakili satu rincian barang dan tidak menyimpan daftar barang sebagai satu kelompok berulang.
+
+Bentuk relasi 1NF secara sederhana dapat ditulis sebagai berikut.
+
+\`\`\`text
+PESANAN_1NF (
+    no_pesanan,
+    tanggal_pesanan,
+    id_pelanggan,
+    nama_pelanggan,
+    no_whatsapp,
+    sumber_pesanan,
     kode_barang,
-    nama_barang
+    nama_barang,
+    qty_pesanan,
+    harga_satuan_pesanan,
+    status_barang_pesanan,
+    subtotal,
+    potongan,
+    total,
+    status_pesanan,
+    catatan_perubahan,
+    disiapkan_oleh,
+    diperiksa_oleh,
+    waktu_siap_diambil,
+    waktu_diambil
 )
+\`\`\`
 
-DETAIL_PENJUALAN_2NF (
-    no_nota_penjualan,
-    kode_barang,
-    qty_detail_penjualan,
-    harga_satuan_detail_penjualan,
-    subtotal_detail_penjualan
-)
-```
+Pada tahap ini, satu baris mencatat satu jenis barang dalam suatu pesanan. Jika satu pesanan berisi beberapa jenis barang, nomor pesanan dan informasi tingkat pesanan dapat muncul pada beberapa baris. Pengulangan tersebut masih dapat terjadi pada 1NF, sehingga tahap berikutnya diperlukan untuk memisahkan atribut sesuai ketergantungannya.
 
-Pada susunan ini, `no_nota_penjualan` menjadi kunci untuk `PENJUALAN_2NF`, `kode_barang` menjadi kunci untuk `BARANG_2NF`, dan gabungan `no_nota_penjualan` serta `kode_barang` menjadi kunci untuk `DETAIL_PENJUALAN_2NF`.
-
+Bentuk 1NF ini menjadi dasar untuk melanjutkan normalisasi ke bentuk normal kedua (2NF) dan bentuk normal ketiga (3NF).
 ### 3NF
 
 Pada tahap 3NF, atribut yang bergantung pada atribut bukan kunci dipisahkan agar tidak terjadi ketergantungan transitif. Contohnya, `kode_petugas` menentukan nama dan peran petugas, sedangkan `no_anggota` menentukan data anggota. Karena itu, data petugas dan anggota disimpan pada tabel masing-masing.
