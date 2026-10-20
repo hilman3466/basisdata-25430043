@@ -38,38 +38,96 @@ PESANAN_UNF (
 
 Bagian yang ditulis di antara tanda `{ ... }` adalah rincian barang yang bisa muncul beberapa kali dalam satu pesanan. Data ini kemudian dipisahkan pada tahap normalisasi agar setiap jenis informasi mempunyai tempat penyimpanan yang lebih sesuai.
 
-### F.2 Menentukan Ketergantungan Fungsional (FD)
+### 2NF
 
-Ketergantungan fungsional digunakan untuk melihat hubungan antara suatu atribut dengan atribut lainnya. Penentuannya mengacu pada aturan bisnis P02 dan rancangan ERD P03.
+Pada tahap 2NF, atribut yang hanya bergantung pada sebagian kunci gabungan dipisahkan dari tabel detail. `nama_barang` bergantung pada `kode_barang`, sedangkan tanggal, petugas, anggota, dan nilai pada tingkat nota bergantung pada `no_nota_penjualan`. Atribut yang masih berhubungan secara transitif tetap dipisahkan pada tahap 3NF.
 
-| Kode | Ketergantungan fungsional | Dasar |
-|---|---|---|
-| FD-01 | `no_pesanan` → `tanggal_pesanan`, `nama_pelanggan`, `no_whatsapp`, `sumber_pesanan`, `status_pesanan` | AB-05 menetapkan bahwa nomor pesanan harus berbeda untuk setiap pesanan. AB-07 mengatur status pesanan. |
-| FD-02 | `id_pelanggan` → `nama_pelanggan`, `no_whatsapp` | Identitas pelanggan menentukan data nama dan nomor WhatsApp pelanggan tersebut. |
-| FD-03 | `kode_barang` → `nama_barang` | AB-01 menetapkan bahwa setiap barang mempunyai kode yang unik. |
-| FD-04 | (`no_pesanan`, `kode_barang`) → `qty_pesanan`, `harga_satuan_pesanan`, `status_barang_pesanan` | Untuk tahap awal, diasumsikan satu jenis barang hanya dicatat satu kali dalam sebuah pesanan. Asumsi ini perlu dibedakan dari rancangan kunci pada ERD akhir. |
+Hasil pemisahan pada tahap 2NF dapat ditulis sebagai berikut.
 
-Pada kamus data P02 terdapat atribut `id_detail_pesanan`, sedangkan ERD asli P03 menggunakan gabungan `id_pesanan` dan `id_barang` sebagai kunci detail. Dalam laporan ini, gabungan nomor pesanan dan kode barang digunakan untuk menjelaskan tahap normalisasi awal. Pada ERD P04, setiap baris `DETAIL_PESANAN` menggunakan `id_detail_pesanan` sebagai primary key (PK), sementara `id_pesanan` dan `id_barang` menjadi foreign key (FK).
+```text
+PENJUALAN_2NF (
+    no_nota_penjualan,
+    tgl_penjualan,
+    kode_petugas,
+    nama_petugas,
+    no_anggota,
+    nama_anggota,
+    jumlah_penjualan,
+    diskon_penjualan,
+    total_penjualan
+)
 
-Penggunaan `id_detail_pesanan` memungkinkan setiap baris detail mempunyai identitas sendiri. Pasangan `id_pesanan` dan `id_barang` tidak otomatis harus unik jika aturan toko belum menetapkan bahwa satu jenis barang hanya boleh mempunyai satu baris dalam pesanan.
+BARANG_2NF (
+    kode_barang,
+    nama_barang
+)
 
-Atribut `id_pelanggan` juga digunakan karena pelanggan sudah menjadi entitas dalam P02 dan P03. Walaupun ID tersebut tidak tercetak langsung pada formulir pesanan, identitas pelanggan diperlukan agar pesanan dapat dihubungkan dengan data pelanggan yang tersimpan.
+DETAIL_PENJUALAN_2NF (
+    no_nota_penjualan,
+    kode_barang,
+    qty_detail_penjualan,
+    harga_satuan_detail_penjualan,
+    subtotal_detail_penjualan
+)
+```
 
-### F.3 Tahapan Normalisasi
+Pada susunan ini, `no_nota_penjualan` menjadi kunci untuk `PENJUALAN_2NF`, `kode_barang` menjadi kunci untuk `BARANG_2NF`, dan gabungan `no_nota_penjualan` serta `kode_barang` menjadi kunci untuk `DETAIL_PENJUALAN_2NF`.
 
-#### F.3.1 Bentuk Normal Pertama (1NF)
+### 3NF
 
-Pada tahap 1NF, daftar barang yang berulang dipisahkan sehingga satu baris hanya memuat satu rincian barang. Informasi umum pesanan, seperti tanggal, pelanggan, dan status, masih berada dalam struktur awal yang sama.
+Pada tahap 3NF, atribut yang bergantung pada atribut bukan kunci dipisahkan agar tidak terjadi ketergantungan transitif. Contohnya, `kode_petugas` menentukan nama dan peran petugas, sedangkan `no_anggota` menentukan data anggota. Karena itu, data petugas dan anggota disimpan pada tabel masing-masing.
 
-Contoh struktur relasi 1NF:
+Hasil relasi 3NF yang mengikuti skema pada buku adalah sebagai berikut.
 
-| Nama Relasi | Atribut | Kunci sementara |
-|---|---|---|
-| `PESANAN_1NF` | `no_pesanan`, `kode_barang`, `tanggal_pesanan`, `nama_pelanggan`, `no_whatsapp`, `sumber_pesanan`, `nama_barang`, `qty_pesanan`, `harga_satuan_pesanan`, `status_barang_pesanan`, `subtotal`, `potongan`, `total`, `status_pesanan`, `catatan_perubahan`, `disiapkan_oleh`, `diperiksa_oleh`, `waktu_siap_diambil`, `waktu_diambil` | (`no_pesanan`, `kode_barang`) |
+```text
+PENJUALAN (
+    no_nota_penjualan,
+    tgl_penjualan,
+    kode_petugas,
+    no_anggota,
+    bayar_penjualan
+)
 
-Kunci gabungan pada contoh tersebut masih bersifat sementara karena didasarkan pada asumsi bahwa jenis barang yang sama tidak dicatat lebih dari sekali dalam satu pesanan.
+DETAIL_PENJUALAN (
+    no_nota_penjualan,
+    kode_barang,
+    qty_detail_penjualan,
+    harga_satuan_detail_penjualan
+)
 
-Pada ERD asli P03, `DETAIL_PESANAN` menggunakan kunci gabungan `id_pesanan` dan `id_barang`. Sementara itu, P02 sudah mencantumkan `id_detail_pesanan` dalam kamus datanya. Untuk hasil rancangan P04, saya memilih `id_detail_pesanan` sebagai PK agar setiap baris detail dapat dirujuk secara tersendiri. File ERD P03 tetap dipertahankan sebagai hasil Modul 3.
+BARANG (
+    kode_barang,
+    nama_barang,
+    kategori_barang,
+    harga_jual_barang,
+    stok_barang,
+    stok_min_barang
+)
+
+PETUGAS (
+    kode_petugas,
+    nama_petugas,
+    peran_petugas
+)
+
+ANGGOTA (
+    no_anggota,
+    nim_anggota,
+    nama_anggota,
+    prodi_anggota,
+    no_hp_anggota,
+    status_anggota,
+    tgl_daftar_anggota
+)
+```
+
+Pada skema tersebut, `DETAIL_PENJUALAN` menggunakan gabungan `no_nota_penjualan` dan `kode_barang` sebagai kunci. Harga satuan disimpan pada detail transaksi agar perubahan harga jual pada tabel `BARANG` tidak mengubah harga transaksi sebelumnya.
+
+Atribut `bayar_penjualan` dipertahankan pada skema relasional hasil normalisasi karena sudah tercantum pada entitas `PENJUALAN` di ERD P03 Kopma. Atribut ini tidak tercantum pada bentuk UNF contoh buku, sehingga penempatannya merupakan penyesuaian saat hasil normalisasi dipetakan ke rancangan Kopma.
+
+Sesuai keputusan dalam buku, `subtotal_detail_penjualan`, `jumlah_penjualan`, dan `total_penjualan` dihitung dari rincian transaksi serta status anggota, sehingga tidak disimpan sebagai atribut dasar pada tabel operasional. `diskon_penjualan` juga tidak disimpan secara terpisah karena besarnya mengikuti aturan diskon anggota aktif pada AB-02. Keputusan ini membantu menghindari ketidaksesuaian antara nilai turunan dan data transaksi.
+
+Atribut master seperti `kategori_barang`, `harga_jual_barang`, `stok_barang`, dan `stok_min_barang` berasal dari kamus data P02 Kopma. Atribut tersebut melengkapi tabel `BARANG` pada saat hasil normalisasi disesuaikan dengan kebutuhan data proyek.
 
 #### F.3.2 Bentuk Normal Kedua (2NF)
 
