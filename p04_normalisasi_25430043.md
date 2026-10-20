@@ -74,6 +74,8 @@ Pada ERD Modul 3, entitas `detail_pesanan` memakai kunci gabungan
 `id_pesanan` dan `id_barang`. Sementara itu, kamus data P02 juga
 mencantumkan `id_detail_pesanan`. Perbedaan ini akan dievaluasi
 sebelum skema akhir ditetapkan.
+
+#### F.3.2 Bentuk Normal Kedua (2NF)
 Pada tahap 1NF, setiap baris sudah mewakili satu jenis barang dalam sebuah pesanan. Namun, masih ada data yang sebenarnya bergantung pada sebagian kunci gabungan saja.
 Contohnya, nama barang bergantung pada kode barang, sedangkan tanggal dan status pesanan bergantung pada nomor pesanan. Data tersebut tidak perlu diulang pada setiap baris rincian barang.
 
