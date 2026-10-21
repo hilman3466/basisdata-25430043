@@ -14,6 +14,7 @@ Bentuk data awal atau UNF dapat digambarkan seperti berikut.
 PESANAN_UNF (
     no_pesanan,
     tanggal_pesanan,
+    id_pelanggan,
     nama_pelanggan,
     no_whatsapp,
     sumber_pesanan,
